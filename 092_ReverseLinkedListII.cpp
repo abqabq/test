@@ -16,12 +16,14 @@ public:
         ListNode dummy(0);
         dummy.next = head;
         
+        // find the pre-M node
         n -= m;
         ListNode *p = &dummy;
         while(--m) {
             p = p->next;
         }
         
+        // reverse nodes from M to N
         ListNode *p1 = p->next;
         ListNode *p2 = p1->next;
         while(n--){
