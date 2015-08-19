@@ -7,6 +7,8 @@ public:
         int result = 0;
         while (num) {
             int digit = num % 10;
+            
+            // check for overflow
             if (result > (INT_MAX - digit) / 10) {
                 return 0;
             }
